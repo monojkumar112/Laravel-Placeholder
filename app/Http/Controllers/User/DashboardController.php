@@ -14,7 +14,15 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        return view('layouts.frontend.dashboard');
+    }
+    public function userMangement()
+    {
+        return view('layouts.frontend.user-mangement.index');
+    }
+    public function tenderParticipation()
+    {
+        return view('layouts.frontend.tender-participation.index');
     }
 
     /**

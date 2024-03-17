@@ -15,6 +15,7 @@ class DashboardController extends Controller
         $today = Carbon::today();
         $newUsersCount = User::whereDate('created_at', $today)->count();
         $user = User::all()->count();
-        return view('dashboard', compact('user', 'newUsersCount'));
+        return view('admin.dashboard', compact('user', 'newUsersCount'));
     }
+
 }

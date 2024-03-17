@@ -33,6 +33,8 @@ Route::namespace('App\Http\Controllers')->group(
     function () {
         Route::group(['as' => 'user.', 'prefix' => 'user', 'namespace' => 'User', 'middleware' => ['auth', 'user']], function () {
             Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
+            Route::get('/user-mangement', [UserDashboardController::class, 'userMangement'])->name('user-mangement');
+            Route::get('/tender-participation', [UserDashboardController::class, 'tenderParticipation'])->name('tender-participation');
         });
     }
 );

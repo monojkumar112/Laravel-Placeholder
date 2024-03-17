@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 @include('layouts.backend.style')
 
 @section('content')
@@ -79,4 +79,62 @@
     </div>
 
     @include('layouts.backend.js')
+@endsection --}}
+
+
+
+
+{{-- =============login =========== --}}
+@extends('layouts.user.master')
+
+@section('content')
+   <div class="content mb-5">
+      <div class="content-element">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <h2 class="login-header">Login to your account</h2>
+              <div class="form-background">
+                <form class="log-in-form">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Username/ID:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      aria-describedby="emailHelp"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <div class="password-container">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        aria-describedby="emailHelp"
+                      />
+                      <span
+                        class="toggle-password"
+                        onclick="togglePasswordVisibility()"
+                      ></span>
+                    </div>
+                  </div>
+                  <p class="forget-pass">
+                    <a href="#">Forgot/Unlock my password?</a>
+                  </p>
+                  <button type="button" class="custom-btn w-100">LOGIN</button>
+                  <p class="login-footer">Are you a new user?</p>
+                  <a href="/signup.html" class="custom-btn mt-2 text-center w-100">
+                   SIGN UP
+                  </a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 @endsection
